@@ -1,79 +1,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-*{
-    margin: 0 ; 
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background: #f9f9ff;
     min-height: 100vh;
     overflow-x: hidden;
 }
-header{
+
+header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 20px 50px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
-.logo{
-    font-size: 2em;
+
+.logo {
+    font-size: 1.8em;
     color: #359381;
     pointer-events: none;
-    margin-right: 270px;
 }
 
-.navigation a{
+.navigation a {
     text-decoration: none;
     color: #359381;
     padding: 6px 15px;
     border-radius: 20px;
-    margin: 0 10px;
+    margin: 0 5px;
     font-weight: 600;
 }
-.navigation a:hover,.navigation a.active{
+
+.navigation a:hover, .navigation a.active {
     background: #359381;
     color: #f9f9ff;
 }
-.parallax{
+
+.parallax {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
 #text {
     position: absolute;
-    font-size: 5em;
+    font-size: 4em;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    transition: transform 0.5s ease-out;
 }
-.parallax img{
+
+.parallax img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     pointer-events: none;
+    transition: transform 0.5s ease-out;
 }
+
 .sec {
     position: relative;
     background: #003329;
-    padding: 100px;
+    padding: 80px 20px;
+    text-align: center;
 }
-.sec h2{
-    font-size: 3em;
+
+.sec h2 {
+    font-size: 2.5em;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
-.sec p{
+
+.sec p {
     font-size: 1em;
     color: #fff;
     font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+
+@media (min-width: 768px) {
+    header {
+        padding: 30px 100px;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .navigation a {
+        margin: 0 10px;
+    }
+
+    #text {
+        font-size: 5em;
+    }
+
+    .sec {
+        padding: 100px 50px;
+        text-align: left;
+    }
+
+    .sec h2 {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 30px 150px;
+    }
+
+    .logo {
+        font-size: 2.5em;
+    }
+
+    .navigation a {
+        margin: 0 15px;
+    }
+
+    .sec h2 {
+        font-size: 3.5em;
+    }
+
+    .sec p {
+        font-size: 1.1em;
+    }
 }
