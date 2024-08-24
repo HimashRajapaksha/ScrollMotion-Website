@@ -141,3 +141,29 @@ header {
         font-size: 1.1em;
     }
 }
+/* General styles, fonts, and responsive layout */
+
+.about {
+    background: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.parallax.continuation {
+    background: #e8f5e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text-continuation {
+    position: absolute;
+    font-size: 4em;
+    color: #4caf50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    transition: transform 0.5s ease-out;
+}
+
+/* Responsive adjustments from earlier */
