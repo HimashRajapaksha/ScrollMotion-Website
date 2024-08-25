@@ -1,3 +1,4 @@
+/* General reset and font import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -13,20 +14,22 @@ body {
     overflow-x: hidden;
 }
 
+/* Header styles */
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .logo {
-    font-size: 1.8em;
+    font-size: 2em;
     color: #359381;
     pointer-events: none;
 }
@@ -36,7 +39,7 @@ header {
     color: #359381;
     padding: 6px 15px;
     border-radius: 20px;
-    margin: 0 5px;
+    margin: 0 10px;
     font-weight: 600;
 }
 
@@ -45,31 +48,29 @@ header {
     color: #f9f9ff;
 }
 
+/* Parallax section styles */
 .parallax {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-}
-
-#text {
-    position: absolute;
-    font-size: 4em;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-    transition: transform 0.5s ease-out;
+    overflow: hidden;
 }
 
 .parallax img {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     pointer-events: none;
     transition: transform 0.5s ease-out;
 }
 
+#text {
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-out;
+}
+
+/* About section */
 .sec {
     position: relative;
     background: #003329;
@@ -78,92 +79,55 @@ header {
 }
 
 .sec h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: #fff;
     margin-bottom: 20px;
 }
 
 .sec p {
-    font-size: 1em;
+    font-size: 1.2em;
     color: #fff;
     font-weight: 300;
-    max-width: 800px;
-    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
-/* Responsive Styles */
-
-@media (min-width: 768px) {
-    header {
-        padding: 30px 100px;
-    }
-
+/* Responsive adjustments */
+@media (max-width: 768px) {
     .logo {
-        font-size: 2em;
+        font-size: 1.5em;
     }
-
-    .navigation a {
-        margin: 0 10px;
+    
+    .parallax img {
+        width: 150%;
     }
 
     #text {
-        font-size: 5em;
-    }
-
-    .sec {
-        padding: 100px 50px;
-        text-align: left;
-    }
-
-    .sec h2 {
         font-size: 3em;
     }
-}
-
-@media (min-width: 1024px) {
-    header {
-        padding: 30px 150px;
-    }
-
-    .logo {
+    
+    .sec h2 {
         font-size: 2.5em;
     }
 
-    .navigation a {
-        margin: 0 15px;
+    .sec p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax img {
+        width: 200%;
     }
 
+    #text {
+        font-size: 2.5em;
+    }
+    
     .sec h2 {
-        font-size: 3.5em;
+        font-size: 2em;
     }
 
     .sec p {
-        font-size: 1.1em;
+        font-size: 0.9em;
     }
 }
-/* General styles, fonts, and responsive layout */
-
-.about {
-    background: #ffffff;
-    padding: 80px 20px;
-    text-align: center;
-    color: #333;
-}
-
-.parallax.continuation {
-    background: #e8f5e9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-#text-continuation {
-    position: absolute;
-    font-size: 4em;
-    color: #4caf50;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-    transition: transform 0.5s ease-out;
-}
-
-/* Responsive adjustments from earlier */
