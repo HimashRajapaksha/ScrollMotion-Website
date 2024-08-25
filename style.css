@@ -158,12 +158,12 @@ header {
     height: 100vh;
 }
 
-#text-continuation {
+/* #text-continuation {
     position: absolute;
     font-size: 4em;
     color: #4caf50;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
     transition: transform 0.5s ease-out;
-}
+} */
 
 /* Responsive adjustments from earlier */
